@@ -1,6 +1,6 @@
 import { bnIntToWAD, WAD } from '@hailstonelabs/big-number-utils'
 import { BigNumber } from 'ethers'
-import solveForDeltaX from './solveForDeltaX'
+import { solveForDeltaX } from './solveForDeltaX'
 
 describe('solveForDeltaX', () => {
   test('test1: netural coverage ratio', () => {

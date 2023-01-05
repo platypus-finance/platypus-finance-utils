@@ -1552,6 +1552,14 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@platypus-finance/platypus-finance-utils@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@platypus-finance/platypus-finance-utils/-/platypus-finance-utils-1.0.3.tgz#c4478703a11d29ed17799cce5f72f5ec5c6242ab"
+  integrity sha512-9YoEokpEiaa/39EwgFTSYwqQcCWFh94xHFwVZbIpWp0pjlRcaavst4EE31j5M+ffCkrx5tTQS3lKD6wupppsgA==
+  dependencies:
+    "@hailstonelabs/big-number-utils" "^1.0.5"
+    ethers "^5.7.1"
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.51.tgz#645f33fe4e02defe26f2f5c0410e1c094eac7f5f"

@@ -208,7 +208,7 @@ export function newtonGDerivative(
  * @param {BigNumber} slippageParamXThreshold in WAD
  * @returns {BigNumber} From amount, Delta X, in WAD
  */
-export default function solveForDeltaX(
+export function solveForDeltaX(
   assetX: BigNumber,
   assetY: BigNumber,
   liabilityX: BigNumber,

@@ -1,9 +1,9 @@
 {
   "name": "@platypus-finance/platypus-finance-utils",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.js",
   "files": [
     "/dist"
   ],
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@hailstonelabs/big-number-utils": "^1.0.5",
+    "@platypus-finance/platypus-finance-utils": "^1.0.3",
     "ethers": "^5.7.1"
   },
   "devDependencies": {
