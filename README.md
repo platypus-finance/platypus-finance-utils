@@ -40,53 +40,16 @@ $ yarn add @platypus-finance/platypus-finance-utils
 
 **Params**
 
-- `fromAmount` **{BigNumber}** delta x in WAD
-- `assetX` **{BigNumber}** asset of token X in WAD
+- `assetX` **{BigNumber}** asset of token X in WAD. (e.g, use ethers.js's `parseEther('1.5')` for 1.5 USDC)
 - `assetY` **{BigNumber}** asset of token Y in WAD
 - `liabilityX` **{BigNumber}** liability of token X in WAD
 - `liabilityY` **{BigNumber}** liability of token Y in WAD
-- `fy` **{BigNumber}** USD price of token X in WAD
-- `fx` **{BigNumber}** USD price of token Y in WAD
-- `toAmount` **{BigNumber}** specified to amount of token Y in WAD
-- `haircutRate` **{BigNumber}** haircut rate in WAD
-- `slippageParamK` **{BigNumber}** in WAD
-- `slippageParamN` **{BigNumber}** in BigNumber Int
-- `slippageParamC1` **{BigNumber}** in WAD
-- `slippageParamXThreshold` **{BigNumber}** in WAD
-- `returns` **{BigNumber}** g(delta x) in WAD
-
-### [.newtonGDerivative](src/solveForDeltaX.ts#L159)
-
-**Params**
-
-- `fromAmount` **{BigNumber}** delta x in WAD
-- `assetX` **{BigNumber}** asset of token X in WAD
-- `assetY` **{BigNumber}** asset of token Y in WAD
-- `liabilityX` **{BigNumber}** liability of token X in WAD
-- `liabilityY` **{BigNumber}** liability of token Y in WAD
-- `fy` **{BigNumber}** USD price of token X in WAD
-- `fx` **{BigNumber}** USD price of token Y in WAD
-- `toAmount` **{BigNumber}** specified to amount of token Y in WAD
-- `slippageParamK` **{BigNumber}** in WAD
-- `slippageParamN` **{BigNumber}** in BigNumber Int
-- `slippageParamC1` **{BigNumber}** in WAD
-- `slippageParamXThreshold` **{BigNumber}** in WAD
-- `returns` **{BigNumber}** g'(delta x) in WAD
-
-### [.solveForDeltaX](src/solveForDeltaX.ts#L211)
-
-**Params**
-
-- `assetX` **{BigNumber}** asset of token X in WAD
-- `assetY` **{BigNumber}** asset of token Y in WAD
-- `liabilityX` **{BigNumber}** liability of token X in WAD
-- `liabilityY` **{BigNumber}** liability of token Y in WAD
-- `fy` **{BigNumber}** USD price of token X in WAD
-- `fx` **{BigNumber}** USD price of token Y in WAD
-- `toAmount` **{BigNumber}** specified to amount of token Y in WAD
-- `haircutRate` **{BigNumber}** haircut rate in WAD
-- `slippageParamK` **{BigNumber}** in WAD
-- `slippageParamN` **{BigNumber}** in BigNumber Int
-- `slippageParamC1` **{BigNumber}** in WAD
-- `slippageParamXThreshold` **{BigNumber}** in WAD
-- `returns` **{BigNumber}** From amount, Delta X, in WAD
+- `fy` **{BigNumber}** USD price of token X in WAD. (Can use 1 WAD for both fy and fx since our protocol current only supports stablepairs)
+- `fx` **{BigNumber}** USD price of token Y in WAD. (Can use 1 WAD for both fy and fx since our protocol current only supports stablepairs)
+- `toAmount` **{BigNumber}** specified TO amount of token Y in WAD
+- `haircutRate` **{BigNumber}** haircut rate in WAD. Can be obtained from pool's contract's `getHaircutRate`
+- `slippageParamK` **{BigNumber}** in WAD. Can be obtained from pool's contract's `getSlippageParamK`
+- `slippageParamN` **{BigNumber}** in BigNumber Int. Can be obtained from pool's contract's `getSlippageParamN`
+- `slippageParamC1` **{BigNumber}** in WAD. Can be obtained from pool's contract's `getC1`
+- `slippageParamXThreshold` **{BigNumber}** in WAD. Can be obtained from pool's contract's `getXThreshold`
+- `returns` **{BigNumber}** FROM amount, Delta X, in WAD
