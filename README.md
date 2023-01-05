@@ -16,27 +16,11 @@ Or if you prefer using Yarn:
 $ yarn add @platypus-finance/platypus-finance-utils
 ```
 
-## solveForDeltaX API Reference
+## API Reference
 
-### [.getK](src/solveForDeltaX.ts#L29)
+### [.solveForDeltaX](src/solveForDeltaX.ts#L211)
 
-**Params**
-
-- `assetX` **{BigNumber}** asset of token X in WAD
-- `assetY` **{BigNumber}** asset of token Y in WAD
-- `liabilityX` **{BigNumber}** liability of token X in WAD
-- `liabilityY` **{BigNumber}** liability of token Y in WAD
-- `fy` **{BigNumber}** USD price of token X in WAD
-- `fx` **{BigNumber}** USD price of token Y in WAD
-- `toAmount` **{BigNumber}** specified to amount of token Y in WAD
-- `haircutRate` **{BigNumber}** haircut rate in WAD
-- `slippageParamK` **{BigNumber}** in WAD
-- `slippageParamN` **{BigNumber}** in BigNumber Int
-- `slippageParamC1` **{BigNumber}** in WAD
-- `slippageParamXThreshold` **{BigNumber}** in WAD
-- `returns` **{BigNumber}** the constant K in the g()
-
-### [.newtonG](src/solveForDeltaX.ts#L85)
+Regarding Section 6 of our [AMM yellow paper](https://cdn.platypus.finance/Platypus_AMM_Yellow_Paper.pdf), the FROM amount, aka, delta x (denoted delta j in the paper) in our Newton's method can be obtained from the following `solveForDeltaX` function, when the TO amount is given.
 
 **Params**
 
