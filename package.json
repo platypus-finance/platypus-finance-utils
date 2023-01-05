@@ -33,5 +33,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platypus-finance/platypus-finance-utils"
   }
 }
